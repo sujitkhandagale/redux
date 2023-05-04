@@ -7,9 +7,13 @@ const initialState = {
 };
 // actions = two types 1. action / 2. action creator
 //  increment
+
 // decrement
+
 // reset
+
 // increase by amount
+
 // action
 
 {
@@ -72,7 +76,7 @@ const counterReducer = (state = initialState, action) => {
     }
     else if (action.type === 'INCREASE_BY_AMT') {
         return {
-            count : state.count + action.payload
+            count: state.count + action.payload
         }
     }
 };
@@ -83,21 +87,21 @@ const store = createStore(counterReducer);
 // subscribe to store
 store.subscribe(() => {
     const data = store.getState();
-console.log(data);
+    console.log(data);
 })
- // dispatch action
-/ // increment
-// store.dispatch(incrementAction())
-// store.dispatch(incrementAction())
-// store.dispatch(incrementAction())
-// store.dispatch(incrementAction())
- // decrement
-// 
-// reset 
-// store.dispatch(resetAction())
+    // dispatch action
+    / // increment
+    // store.dispatch(incrementAction())
+    // store.dispatch(incrementAction())
+    // store.dispatch(incrementAction())
+    // store.dispatch(incrementAction())
+    // decrement
+    // 
+    // reset 
+    // store.dispatch(resetAction())
 
-// dispatch action with payload
-store.dispatch(increaseByAmt(100))
+    // dispatch action with payload
+    store.dispatch(increaseByAmt(100))
 store.dispatch(decrementAction())
 
 
